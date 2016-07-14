@@ -4,4 +4,6 @@ steps:
   - name: Build
     command: .buildkite/build.sh
     artifact_paths: ci-playground
-    
+  - name: Deploy
+    command: .buildkite/deploy.sh
+    branches: 'master'
