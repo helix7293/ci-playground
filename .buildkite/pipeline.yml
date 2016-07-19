@@ -1,9 +1,15 @@
 steps:
   - name: Test
     command: .buildkite/test.sh
+
+  - wait
+
   - name: Build
     command: .buildkite/build.sh
     artifact_paths: ci-playground
+
+  - wait
+
   - name: Deploy
     command: .buildkite/deploy.sh
     branches: 'master'
