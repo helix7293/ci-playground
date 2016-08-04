@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="basestyle.css">
+    <title>Image Edit</title>
+    </head>
+
+    <body>
+        <img src="image?key={{ .Key }}" style="max-width: 500px; max-height: 500px">
+        <form method="POST" enctype="multipart/form-data">
+            <input name="width" value="{{ .Width }}"/> x
+            <input name="height" value="{{ .Height }}"/>
+            <input type="hidden" name="key" value="{{ .Key }}"/> <br/>
+            <input type="submit" value="Resize" />
+        </form>
+    </body>
+
+</html>
