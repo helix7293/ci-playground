@@ -2,8 +2,8 @@
 
 set -euxo pipefail
 
-export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 go get github.com/jteeuwen/go-bindata/go-bindata
 go-bindata static
